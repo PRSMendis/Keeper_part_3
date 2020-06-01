@@ -6,12 +6,13 @@ function CreateArea(props) {
     content: ""
   });
 
-  function NewNote() {
+  function NewNote(event) {
     // Set the values of title and content
     // console.log(props);
     // props.setCT()
+    props.onAdd(note);
+    event.preventDefault();
   }
-
   function handleChange(event) {
     // console.log(event.target);
     const { name, value } = event.target;
